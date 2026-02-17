@@ -1,0 +1,9 @@
+NPCs,            guia,   Mercader,   Golfista,   Zoologa,    Recaudador de impuestos,    Mecanica,   Cyborg,     Traficante de armas
+guia,                    0,     1,           1,         0.94,               1,                   1,         1,                 1
+Mercader,                1,     0,           1,         1,                  1.06,                1,         1,                 1        
+Golfista,                1,     1.12,        0,         0.94,               1,                   1,         1,                 1
+Zoologa,                 1,     1,           0.94,      0,                  1,                   1,         1,                 1.12            
+Recaudador de impuestos, 1,     0.88,        1,         1,                  0,                   1.06,      1,                 1
+Mecanica,                1,     1,           1,         1,                  1,                   0,         0.94,              1.06
+Cyborg,                  1,     1,           1,         0.94,               1,                   1,         0,                 1
+Traficante de armas,     1,     1,           1.06,      1,                  1,                   1,         1,                 0

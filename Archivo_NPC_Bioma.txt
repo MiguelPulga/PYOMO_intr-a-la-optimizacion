@@ -1,0 +1,15 @@
+NPCs, Glowing Mushroom biome, Bosque biome, Snow biome, Desert biome, Ocean biome, Underground biome, Cavern biome, Underworld biome, Bendicion biome, Jungle biome
+guia,            1,                 0.94,       1,            1,           1.06,           1,             1,              1,                1,               1
+Mercader,        1,                 0.94,       1,            1.06,        1,              1,             1,              1,                1,               1
+Golfista,        1,                 0.94,       1,            1,           1,              1.06,          1.06,           1.06,             1,               1
+Zoologa,         1,                 0.94,       1,            1.06,        1,              1,             1,              1,                1,               1
+Recaudador de impuestos, 1,           1,       0.94,          1.06,        1,              1,             1,              1,                1.06,            1
+Mecanica,        1,                   1,       0.94,          1,           1,              1.06,          1.06,           1.06,             1,               1
+Cyborg,          1,                   1,       0.94,          1,           1,              1,             1,              1,                1,               1.06
+Traficante de armas,     1,           1,       1.06,          0.94,        1,              1,             1,              1,                1,               1
+Pintor,          1,                   1.06,    1,             1,           1,              1,             1,              1,                1,               0.94
+Estilista,       1,                   1,       1.06,          1,           0.94,           1,             1,              1,                1,               1
+Buhonero,        1,                   1,       1,             1,           1,              0.94,          0.94,           0.94,             1.06,            1
+Mago,            1,                   1,       1,             1,           1.06,           1,             1,              1,                0.94,            1
+Trufa,           0.94,                1,       1,             1,           1,              1,             1,              1,                1,               1
+Enfermera,       1,                   1,       1.06,          1,           1,              1,             1,              1,                0.94,            1

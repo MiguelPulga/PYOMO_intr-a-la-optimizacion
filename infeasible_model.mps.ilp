@@ -1,0 +1,115 @@
+\ Model Asignacion de NPCs a biomas_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ asignacion_unica(Cyborg): X_nb(Cyborg_Bosque_biome)
+   + X_nb(Cyborg_Cavern_biome) + X_nb(Cyborg_Desert_biome)
+   + X_nb(Cyborg_Glowing_Mushroom_biome) + X_nb(Cyborg_Ocean_biome)
+   + X_nb(Cyborg_Snow_biome) + X_nb(Cyborg_Underground_biome)
+   + X_nb(Cyborg_Underworld_biome) = 5
+ asignacion_unica(Golfista): X_nb(Golfista_Bosque_biome)
+   + X_nb(Golfista_Cavern_biome) + X_nb(Golfista_Desert_biome)
+   + X_nb(Golfista_Glowing_Mushroom_biome) + X_nb(Golfista_Ocean_biome)
+   + X_nb(Golfista_Snow_biome) + X_nb(Golfista_Underground_biome)
+   + X_nb(Golfista_Underworld_biome) = 5
+ asignacion_unica(Mecanica): X_nb(Mecanica_Bosque_biome)
+   + X_nb(Mecanica_Cavern_biome) + X_nb(Mecanica_Desert_biome)
+   + X_nb(Mecanica_Glowing_Mushroom_biome) + X_nb(Mecanica_Ocean_biome)
+   + X_nb(Mecanica_Snow_biome) + X_nb(Mecanica_Underground_biome)
+   + X_nb(Mecanica_Underworld_biome) = 5
+ asignacion_unica(Mercader): X_nb(Mercader_Bosque_biome)
+   + X_nb(Mercader_Cavern_biome) + X_nb(Mercader_Desert_biome)
+   + X_nb(Mercader_Glowing_Mushroom_biome) + X_nb(Mercader_Ocean_biome)
+   + X_nb(Mercader_Snow_biome) + X_nb(Mercader_Underground_biome)
+   + X_nb(Mercader_Underworld_biome) = 5
+ asignacion_unica(Zoologa): X_nb(Zoologa_Bosque_biome)
+   + X_nb(Zoologa_Cavern_biome) + X_nb(Zoologa_Desert_biome)
+   + X_nb(Zoologa_Glowing_Mushroom_biome) + X_nb(Zoologa_Ocean_biome)
+   + X_nb(Zoologa_Snow_biome) + X_nb(Zoologa_Underground_biome)
+   + X_nb(Zoologa_Underworld_biome) = 5
+ asignacion_unica(guia): X_nb(guia_Bosque_biome) + X_nb(guia_Cavern_biome)
+   + X_nb(guia_Desert_biome) + X_nb(guia_Glowing_Mushroom_biome)
+   + X_nb(guia_Ocean_biome) + X_nb(guia_Snow_biome)
+   + X_nb(guia_Underground_biome) + X_nb(guia_Underworld_biome) = 5
+ capacidad(Bosque_biome): Y_b(Bosque_biome) - 3 Y_bn(Bosque_biome) <= 0
+ capacidad(Cavern_biome): Y_b(Cavern_biome) - 3 Y_bn(Cavern_biome) <= 0
+ capacidad(Desert_biome): Y_b(Desert_biome) - 3 Y_bn(Desert_biome) <= 0
+ capacidad(Glowing_Mushroom_biome): Y_b(Glowing_Mushroom_biome)
+   - 3 Y_bn(Glowing_Mushroom_biome) <= 0
+ capacidad(Ocean_biome): Y_b(Ocean_biome) - 3 Y_bn(Ocean_biome) <= 0
+ capacidad(Underground_biome): Y_b(Underground_biome)
+   - 3 Y_bn(Underground_biome) <= 0
+ capacidad(Underworld_biome): Y_b(Underworld_biome)
+   - 3 Y_bn(Underworld_biome) <= 0
+ conteo_bioma(Bosque_biome): - X_nb(Cyborg_Bosque_biome)
+   - X_nb(Golfista_Bosque_biome) - X_nb(Mecanica_Bosque_biome)
+   - X_nb(Mercader_Bosque_biome) - X_nb(Zoologa_Bosque_biome)
+   - X_nb(guia_Bosque_biome) + Y_b(Bosque_biome) = 0
+ conteo_bioma(Cavern_biome): - X_nb(Cyborg_Cavern_biome)
+   - X_nb(Golfista_Cavern_biome) - X_nb(Mecanica_Cavern_biome)
+   - X_nb(Mercader_Cavern_biome) - X_nb(Zoologa_Cavern_biome)
+   - X_nb(guia_Cavern_biome) + Y_b(Cavern_biome) = 0
+ conteo_bioma(Desert_biome): - X_nb(Cyborg_Desert_biome)
+   - X_nb(Golfista_Desert_biome) - X_nb(Mecanica_Desert_biome)
+   - X_nb(Mercader_Desert_biome) - X_nb(Zoologa_Desert_biome)
+   - X_nb(guia_Desert_biome) + Y_b(Desert_biome) = 0
+ conteo_bioma(Glowing_Mushroom_biome):
+   - X_nb(Cyborg_Glowing_Mushroom_biome)
+   - X_nb(Golfista_Glowing_Mushroom_biome)
+   - X_nb(Mecanica_Glowing_Mushroom_biome)
+   - X_nb(Mercader_Glowing_Mushroom_biome)
+   - X_nb(Zoologa_Glowing_Mushroom_biome)
+   - X_nb(guia_Glowing_Mushroom_biome) + Y_b(Glowing_Mushroom_biome) = 0
+ conteo_bioma(Ocean_biome): - X_nb(Cyborg_Ocean_biome)
+   - X_nb(Golfista_Ocean_biome) - X_nb(Mecanica_Ocean_biome)
+   - X_nb(Mercader_Ocean_biome) - X_nb(Zoologa_Ocean_biome)
+   - X_nb(guia_Ocean_biome) + Y_b(Ocean_biome) = 0
+ conteo_bioma(Underground_biome): - X_nb(Cyborg_Underground_biome)
+   - X_nb(Golfista_Underground_biome) - X_nb(Mecanica_Underground_biome)
+   - X_nb(Mercader_Underground_biome) - X_nb(Zoologa_Underground_biome)
+   - X_nb(guia_Underground_biome) + Y_b(Underground_biome) = 0
+ conteo_bioma(Underworld_biome): - X_nb(Cyborg_Underworld_biome)
+   - X_nb(Golfista_Underworld_biome) - X_nb(Mecanica_Underworld_biome)
+   - X_nb(Mercader_Underworld_biome) - X_nb(Zoologa_Underworld_biome)
+   - X_nb(guia_Underworld_biome) + Y_b(Underworld_biome) = 0
+Bounds
+ Y_b(Bosque_biome) free
+ Y_b(Cavern_biome) free
+ Y_b(Desert_biome) free
+ Y_b(Glowing_Mushroom_biome) free
+ Y_b(Ocean_biome) free
+ Y_b(Underground_biome) free
+ Y_b(Underworld_biome) free
+Binaries
+ X_nb(Cyborg_Bosque_biome) X_nb(Cyborg_Cavern_biome)
+ X_nb(Cyborg_Desert_biome) X_nb(Cyborg_Glowing_Mushroom_biome)
+ X_nb(Cyborg_Ocean_biome) X_nb(Cyborg_Snow_biome)
+ X_nb(Cyborg_Underground_biome) X_nb(Cyborg_Underworld_biome)
+ X_nb(Golfista_Bosque_biome) X_nb(Golfista_Cavern_biome)
+ X_nb(Golfista_Desert_biome) X_nb(Golfista_Glowing_Mushroom_biome)
+ X_nb(Golfista_Ocean_biome) X_nb(Golfista_Snow_biome)
+ X_nb(Golfista_Underground_biome) X_nb(Golfista_Underworld_biome)
+ X_nb(Mecanica_Bosque_biome) X_nb(Mecanica_Cavern_biome)
+ X_nb(Mecanica_Desert_biome) X_nb(Mecanica_Glowing_Mushroom_biome)
+ X_nb(Mecanica_Ocean_biome) X_nb(Mecanica_Snow_biome)
+ X_nb(Mecanica_Underground_biome) X_nb(Mecanica_Underworld_biome)
+ X_nb(Mercader_Bosque_biome) X_nb(Mercader_Cavern_biome)
+ X_nb(Mercader_Desert_biome) X_nb(Mercader_Glowing_Mushroom_biome)
+ X_nb(Mercader_Ocean_biome) X_nb(Mercader_Snow_biome)
+ X_nb(Mercader_Underground_biome) X_nb(Mercader_Underworld_biome)
+ X_nb(Zoologa_Bosque_biome) X_nb(Zoologa_Cavern_biome)
+ X_nb(Zoologa_Desert_biome) X_nb(Zoologa_Glowing_Mushroom_biome)
+ X_nb(Zoologa_Ocean_biome) X_nb(Zoologa_Snow_biome)
+ X_nb(Zoologa_Underground_biome) X_nb(Zoologa_Underworld_biome)
+ X_nb(guia_Bosque_biome) X_nb(guia_Cavern_biome) X_nb(guia_Desert_biome)
+ X_nb(guia_Glowing_Mushroom_biome) X_nb(guia_Ocean_biome)
+ X_nb(guia_Snow_biome) X_nb(guia_Underground_biome)
+ X_nb(guia_Underworld_biome) Y_bn(Bosque_biome) Y_bn(Cavern_biome)
+ Y_bn(Desert_biome) Y_bn(Glowing_Mushroom_biome) Y_bn(Ocean_biome)
+ Y_bn(Underground_biome) Y_bn(Underworld_biome)
+Generals
+ Y_b(Bosque_biome) Y_b(Cavern_biome) Y_b(Desert_biome)
+ Y_b(Glowing_Mushroom_biome) Y_b(Ocean_biome) Y_b(Underground_biome)
+ Y_b(Underworld_biome)
+End
