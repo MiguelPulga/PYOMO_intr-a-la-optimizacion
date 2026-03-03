@@ -10,6 +10,8 @@ assert SOLVER.available(), f"Solver {solver} is not available."
 
 asasassa
 asasas
+asdadsdasasd
+asasdadasdasads
 
 db = pd.read_csv("Archivo_NPC_Biomacopia.txt", index_col="NPCs", skipinitialspace=True)
 print(db)
