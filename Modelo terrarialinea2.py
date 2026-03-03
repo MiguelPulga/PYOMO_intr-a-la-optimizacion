@@ -8,6 +8,9 @@ assert SOLVER.available(), f"Solver {solver} is not available."
 """ First step """
 # read data from file into pandas DataFrame
 
+asasassa
+asasas
+
 db = pd.read_csv("Archivo_NPC_Biomacopia.txt", index_col="NPCs", skipinitialspace=True)
 print(db)
 
